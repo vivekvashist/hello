@@ -49,4 +49,46 @@ func main() {
 	routers[2] = "cor3.pop1"
 
 	fmt.Printf("%T\n", routers)
+	fmt.Printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+	router := "bdr1.syd1"
+	firstLetter := router[0]
+	fmt.Printf("%b\n", firstLetter) // prints uint8=98
+	fmt.Printf("%d\n", firstLetter) // prints 98 i.e ascii "b"
+	fmt.Printf("%s\n", string(firstLetter))
+
+	fmt.Printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+	// string is a sequence of bytes
+	hostName := "sw1.pop1"
+	// fmt.Printf("%s\n", hostName)
+	// runehostName := []rune(hostName)
+	// fmt.Printf("%d\n", runehostName) // prints [115 119 49 46 112 111 112 49]
+	// bytehostName := []byte(hostName)
+	// fmt.Printf("%s\n", bytehostName) // prints sw1.pop1
+	// fmt.Printf("%T\n", hostName)
+	// fmt.Printf("%T\n", runehostName)
+	// r1 := rune(1111)
+	// fmt.Printf("%T\n", r1)
+	// fmt.Printf("%d\n", r1)
+	fmt.Printf("%s\n", hostName)    // prints sw1.pop1
+	fmt.Printf("%T\n", hostName)    // type string
+	fmt.Printf("%d\n", hostName[0]) // 115
+	fmt.Printf("%T\n", hostName[0]) // unint8
+	for pos, char := range hostName {
+		fmt.Printf("%d -> %d\n", pos, rune(char))
+		fmt.Printf("%d -> %s\n", pos, string(char))
+		fmt.Printf("%d -> %d\n", pos, byte(char))
+	}
+	// prints
+	// 0-> 115
+	// 1 -> 119
+	// 2 -> 49
+	// 3 -> 46
+	// 4 -> 112
+	// 5 -> 111
+	// 6 -> 112
+	// 7 -> 49
+
+	fmt.Printf("%s\n", hostName) // prints sw1.pop1
+	fmt.Printf("%d\n", []rune(hostName))
+	fmt.Printf("%d\n", []byte(hostName))
 }
